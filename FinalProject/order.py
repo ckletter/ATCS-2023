@@ -7,13 +7,14 @@ class Order:
         self.ice_level = ice_level
         self.topping = topping
 
-    def __repr__(self):
+    def return_order(self):
         
-        response = "I would like to order a " + self.flavor + " " + self.tea + " tea with "
-        if self.milk_preference == None:
-            response = response + "no milk "
-        else:
-            response = response + self.milk_preference
+        response = "I would like to order a"
+        if self.flavor != None:
+            response = response + " " + self.flavor
+        response = response + " " + self.tea + " Tea"
+        if self.milk_preference != None:
+            response = response + " with " + self.milk_preference
         if self.topping != None:
             response = response + " and " + self.topping
         return response

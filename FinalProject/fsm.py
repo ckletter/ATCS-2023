@@ -71,9 +71,9 @@ class FSM:
         """
         # gets the action and state associated w/ input and current state using get_transition
         action, state = self.get_transition(input_symbol, self.current_state)
-        # calls the action if the action exists
-        if action != None:
-            action()
         # updates the current state
         if state != None:
             self.current_state = state
+        # calls the action if the action exists
+        if action != None:
+            action()

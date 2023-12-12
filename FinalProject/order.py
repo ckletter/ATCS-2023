@@ -9,7 +9,7 @@ class Order:
         self.order_list = [flavor, tea, milk_preference, sweetness, ice_level, topping]
 
     def return_order(self):
-        
+        "Returns the customer's order and formats it in the conversational way that a customer would give an order"
         response = "I would like to order a"
         if self.flavor != None:
             response = response + " " + self.flavor
